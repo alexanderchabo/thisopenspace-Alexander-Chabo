@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pagination</title>
+    <link rel="stylesheet" href="styles/index.css">
+  </head>
+
+  <body>
+  </div>
+      <table id="spaces">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>HourlyPrice</th>
+          <th>DailyPrice</th>
+          <th>SquareFootage</th>
+          <th>Capacity</th>
+          <th>ViewsCount</th>
+          <th>Photo</th>
+        </tr>
+        {{range .Data.Spaces}}
+        <tr>
+          <td>{{.Id}}</td>
+          <td>{{.Name}}</td>
+          <td>{{.Address}}</td>
+          <td>{{.HourlyPrice}}</td>
+          <td>{{.DailyPrice}}</td>
+          <td>{{.SquareFootage}}</td>
+          <td>{{.Capacity}}</td>
+          <td>{{.ViewsCount}}</td>
+          <td><img src={{.PrimaryPhotoCssUrlSmall}}></td>
+        </tr>
+        {{end}}
+      </table>
+    </div>
+
+    <div class="pagination">
+      {{ with .Pagination }}
+        <a href={{.StartNr}}>First</a>
+        <a href={{.PrevNr}}>&laquo;</a>
+        {{range .Pages}}
+          <a href={{.CurrentNr}} class={{.Active}}>{{.CurrentNr}}</a>
+        {{end}}
+        <a href={{.NextNr}}>&raquo;</a>
+        <a href={{.EndNr}}>Last</a>
+      {{end}}
+    </div>
+
+  </body>
+</html>

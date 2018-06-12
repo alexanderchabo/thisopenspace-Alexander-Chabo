@@ -1,0 +1,77 @@
+.pagination {
+    float: left;
+    position: relative;
+    left: 50%;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.pagination a {
+    float: left;
+    position: relative;
+    left: -50%;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    font-size: 22px;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+$baseColor: #398B93;
+$borderRadius: 10px;
+$imageBig: 100px;
+$imageSmall: 60px;
+$padding: 10px;
+
+body {
+   background-color: lighten($baseColor, 30%);
+   * { box-sizing: border-box; }
+}
+
+header {
+   background-color: darken($baseColor, 5%);
+   color: white;
+   font-size: 1.5em;
+   padding: 1rem;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+img {
+   border-radius: 0%;
+   height: 100px;
+   width: 150px;
+}
+
+#spaces {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 8px;
+}
+
+#spaces td, #spaces th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#spaces tr:nth-child(even){background-color: #f2f2f2;}
+
+#spaces tr:hover {background-color: #ddd;}
+
+#spaces th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
